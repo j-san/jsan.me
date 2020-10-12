@@ -37,7 +37,7 @@ h1, h2, h3 {
 }
 h1 {
   color: var(--color-text-primary);
-  font-size: 3em;
+  font-size: 2.2em;
   line-height: 1;
 }
 h2 {
@@ -54,6 +54,18 @@ h3 {
 }
 h3:before {
   content: '## ';
+}
+@media (min-width: 450px) {
+  h1 {
+    color: var(--color-text-primary);
+    font-size: 3em;
+  }
+}
+@media (min-width: 600px) {
+  h1 {
+    color: var(--color-text-primary);
+    font-size: 4em;
+  }
 }
 a {
   color: var(--color-text-href);
@@ -102,29 +114,34 @@ header {
 
 .baseline {
   margin: 1rem 0;
-  font-size: 2em;
+  font-size: 1.2em;
   text-align: center;
+}
+
+@media (min-width: 600px) {
+  font-size: 2em;
 }
 
 .cols {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   margin: 1em 0;
   flex-wrap: wrap;
 }
 .cols.center {
   align-items: center;
 }
-.cols.cols-2 > * {
-  width: 50%;
-}
-
 @media (min-width: 800px) {
   .cols {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
+  }
+  .cols.cols-2 > * {
+    width: 50%;
   }
 }
 
@@ -266,16 +283,4 @@ aside + aside {
   50% { transform: scale(1); z-index: 0;}
   75% { transform: scale(.75); z-index: -1;}
   100% { transform: scale(1); z-index: 0;}
-}
-
-
-
-.description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-.csm-certified { float: right; margin-right: 40px; }
-
-@media (min-width: 600px) {
-  h1 {
-    color: var(--color-text-primary);
-    font-size: 60px;
-  }
 }
