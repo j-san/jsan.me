@@ -48,7 +48,7 @@ Sanchez Pando
     </header>
 
     <h2>Freelance Expert Full Stack Web Developer</h2>
-    <p>I'm a Web Alchemist pushing the boundaries of product design, testing and deployment with the Golden ratio in hopes of transforming them into innovations and great user experience.</p>
+    <p>I'm a Web Alchemist pushing the boundaries of <strong>product design, testing and deployment</strong> with the Golden ratio transforming them into <strong>innovations and great user experience.</strong></p>
 
     <h2>Guidelines</h2>
     <ul>
