@@ -70,6 +70,9 @@ h3:before {
 a {
   color: var(--color-text-href);
 }
+p, ol, ul {
+  padding-left: 1.5rem;
+}
 ul li {
   list-style: none;
 }
@@ -88,9 +91,6 @@ code {
 }
 code:before, code:after {
   content: '`';
-}
-p {
-  padding-left: 1.5rem;
 }
 pre {
   padding: 1rem;
@@ -111,6 +111,9 @@ header {
   flex-direction: column;
   justify-content: center;
 }
+header .cols {
+  align-items: center;
+}
 
 .baseline {
   margin: 1rem 0;
@@ -126,14 +129,13 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin: 1em 0;
   flex-wrap: wrap;
 }
-.cols.center {
-  align-items: center;
-}
+
 @media (min-width: 800px) {
+  header .cols,
   .cols {
     display: flex;
     flex-direction: row;
