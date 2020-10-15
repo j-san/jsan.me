@@ -1,4 +1,5 @@
 import {FaGithub, FaTwitter, FaLinkedin, FaStackOverflow} from 'react-icons/fa';
+import {BsChevronDoubleDown} from 'react-icons/bs';
 import smoothscroll from 'smoothscroll-polyfill';
 
 if (process.browser) {
@@ -34,7 +35,6 @@ Sanchez Pando
           </div>
         </div>
       </div>
-      <div className="baseline comment">Web Alchemist</div>
       <div className="tech-gravity" onClick={()=> {
         window.scrollTo({top: window.innerHeight, behavior: 'smooth'});
       }}>
@@ -44,6 +44,8 @@ Sanchez Pando
         <span><img src="images/tech-gravity/docker.svg" /></span>
         <span><img src="images/tech-gravity/nodejs.svg" /></span>
         <span><img src="images/tech-gravity/js.svg" /></span>
+        <div className="baseline comment">Web Alchemist</div>
+        <a href="#"><BsChevronDoubleDown /></a>
       </div>
     </header>
 
@@ -52,12 +54,12 @@ Sanchez Pando
 
     <h2>Guidelines</h2>
     <ul>
-      <li><cite>To solve a problem, first simplify.</cite> (every math book)</li>
-      <li><cite>Do it right before you do it fast.</cite></li>
-      <li><cite>Don't try to do fast, do it smooth, smooth is fast.</cite></li>
-      <li><cite>Simple can be harder than complex.</cite> (Steve Jobs)</li>
+      <li><cite>To solve a problem, simplify first.</cite> (every math book)</li>
+      <li><cite>Make It Work, Make It Right, Make It Fast</cite> (Kent Beck) Note: "Make It Right" is before "Make It Fast".</li>
+      <li><cite>Don't move fast, move smooth, smooth is fast.</cite></li>
       <li><cite>Simple is better than complex.</cite> (The Zen of Python, by Tim Peters <code>python -m this</code>)</li>
-      <li><cite>Knowledge makes everything simpler.</cite> (<a href="http://lawsofsimplicity.com/2006/07/23/law-4-learn">Laws of Simplicity</a>, John Maeda)</li>
+      <li><cite>Simple can be harder than complex.</cite> (Steve Jobs)</li>
+      <li><cite>Knowledge makes everything simpler.</cite> (<a href="http://lawsofsimplicity.com/2006/07/23/law-4-learn" target="_blank">Laws of Simplicity</a>, John Maeda)</li>
     </ul>
 
     <h2>Skills</h2>
@@ -81,7 +83,7 @@ Sanchez Pando
           <li><strong>Docker</strong></li>
           <li>Node.js</li>
           <li>Jamstack</li>
-          <li>Testing: Jest / Cypress / Mocha / Chai</li>
+          <li>Jest / Cypress / Mocha / Chai</li>
         </ul>
       </div>
 
@@ -96,9 +98,9 @@ Sanchez Pando
       </div>
 
       <div>
-        <h3>Methodologies &amp; Skills</h3>
+        <h3>Methods</h3>
         <ul>
-          <li>UX/UI</li>
+          <li><strong>UX/UI</strong></li>
           <li>Agile Method, <strong>Scrum</strong> master certified</li>
           <li>Structured Testing</li>
           <li>Continuous Integration / Delivery / Deployment</li>

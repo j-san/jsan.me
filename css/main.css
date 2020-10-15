@@ -27,7 +27,9 @@ body {
   background-color: var(--color-background);
   white-space: pre-wrap;
   font-size: 16px;
+  line-height: 1.6;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -70,6 +72,9 @@ h3:before {
 a {
   color: var(--color-text-href);
 }
+a:hover, a:active {
+  text-decoration: none;
+}
 p, ol, ul {
   padding-left: 1.5rem;
 }
@@ -77,10 +82,10 @@ ul li {
   list-style: none;
 }
 ul li:before {
-  content: '+ ';
+  content: '- ';
 }
 
-strong { color: var(--color-text-primary); }
+strong { color: var(--color-text-secondary); font-weight: bolder; }
 strong:before, strong:after { content: '**'; }
 em:before, em:after { content: '*'; }
 .comment { font-style: italic; color: var(--color-text-secondary); }
@@ -156,6 +161,7 @@ header .profile-picture {
 header h1 {
   margin: 0;
 }
+
 .social {
   font-size: 2rem;
   margin: .5rem 0 0 0;
@@ -163,6 +169,14 @@ header h1 {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+.social a {
+  transition: transform .5s;
+}
+
+.social a:hover, .social a:active {
+  transform: scale(1.5);
 }
 
 .background {
@@ -182,6 +196,7 @@ aside {
   top: 0;
   width: 100%;
   transform: translate3d(-200px, -600px, -300px) rotateY(60deg);
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
 aside + aside {
@@ -196,6 +211,7 @@ aside + aside {
   position: relative;
   height: 160px;
   margin: 1rem 0;
+  cursor: pointer;
 }
 .tech-gravity > span {
   position: absolute;
@@ -238,6 +254,29 @@ aside + aside {
 .tech-gravity  > span:nth-child(6) {
   animation: proximity 2s infinite linear .8s;
 }
+.tech-gravity > a {
+  position: absolute;
+  left: calc(50% - 25px);
+  top: 160px;
+  font-size: 50px;
+  transition: transform .5s;
+}
+.tech-gravity:hover > a,
+.tech-gravity:active > a {
+  transform: translateY(10px) scale(1.2);
+}
+
+.tech-gravity > .comment {
+  position: relative;
+  top: -50px;
+  transition: transform .5s;
+}
+
+.tech-gravity:hover > .comment,
+.tech-gravity:active > .comment {
+  transform: translateY(-10px) scale(1.2);
+}
+
 
 @keyframes rotate {
   0% {transform: rotate(0);}
